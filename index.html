@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-cloak>
+<head>
+	<meta charset="UTF-8">
+	<title>My Angular app!</title>
+
+	<link rel="icon" href="https://angular.io/resources/images/icons/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./style/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<script src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
+</head>
+<body>
+	<div ng-controller="mainController">
+		{{ name }}
+		<input ng-model="data">
+		{{ data }}
+		<ul>
+			<li ng-repeat="i in data">{{i}}</li>
+		</ul>
+
+		<button ng-click="handleClick()"> Click! </button>
+	</div>
+
+	<div ng-view></div>
+	
+	<script src="./app.js"></script>
+</body>
+</html>
